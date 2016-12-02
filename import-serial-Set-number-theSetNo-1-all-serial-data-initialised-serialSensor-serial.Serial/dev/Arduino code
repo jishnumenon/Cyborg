@@ -1,0 +1,95 @@
+
+
+int theSetNo = 1;
+
+const int tentacle1 = A0;
+const int tentacle2 = A1;
+const int tentacle3 = A2;
+const int tentacle4 = A3;
+const int tentacle5 = A4;
+
+int tent1Value = 0;
+int tent2Value = 0;
+int tent3Value = 0;
+int tent4Value = 0;
+int tent5Value = 0;
+
+void setup()
+{
+  Serial.begin(115200);
+  
+}
+
+void loop()
+{
+  tent1Value = analogRead(tentacle1);
+  tent2Value = analogRead(tentacle2);
+  tent3Value = analogRead(tentacle3);
+  tent4Value = analogRead(tentacle4);
+  tent5Value = analogRead(tentacle5);
+  
+  
+  if (tent1Value > 10)
+    {
+  Serial.print("%T");
+  Serial.print("%TN:1");
+  Serial.print("%TV:");
+  Serial.print(tent1Value);
+  Serial.print("%S:");
+  Serial.print(theSetNo);
+  Serial.println("%?");
+  delay(50);
+  
+    }
+    
+    if (tent2Value > 10)
+    {
+  Serial.print("%T");
+  Serial.print("%TN:2");
+  Serial.print("%TV:");
+  Serial.print(tent2Value);
+  Serial.print("%S:");
+  Serial.print(theSetNo);
+  Serial.println("%?");
+  delay(50);
+  
+    }
+    if (tent3Value > 10)
+    {
+  Serial.print("%T");
+  Serial.print("%TN:3");
+  Serial.print("%TV:");
+  Serial.print(tent3Value);
+  Serial.print("%S:");
+  Serial.print(theSetNo);
+  Serial.println("%?");
+  delay(50);
+  
+    }
+    
+    if (tent4Value > 10)
+    {
+  Serial.print("%T");
+  Serial.print("%TN:4");
+  Serial.print("%TV:");
+  Serial.print(tent4Value);
+  Serial.print("%S:");
+  Serial.print(theSetNo);
+  Serial.println("%?");
+  delay(50);
+  
+    }
+    
+    if (tent5Value > 10)
+    {
+  Serial.print("%T");
+  Serial.print("%TN:5");
+  Serial.print("%TV:");
+  Serial.print(tent5Value);
+  Serial.print("%S:");
+  Serial.print(theSetNo);
+  Serial.println("%?");
+  delay(50);
+  
+    }
+}
